@@ -33,7 +33,7 @@ The following workflow step would send a test message to the default channel.
 
 ```yaml
 -
-  uses: Mitigram/gh-action-mattermost@master
+  uses: Mitigram/gh-action-mattermost@main
   with:
     url: http://{your-mattermost-site}/hooks/xxx-generatedkey-xxx
     text: This is a test message
@@ -46,7 +46,7 @@ wrapper implementation. You can use `-v` to increase verbosity.
 
 ```yaml
 steps:
-  uses: Mitigram/gh-action-mattermost@master
+  uses: Mitigram/gh-action-mattermost@main
   with:
     url: http://{your-mattermost-site}/hooks/xxx-generatedkey-xxx
     text: This is a test message
