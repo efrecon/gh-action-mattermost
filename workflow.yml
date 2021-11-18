@@ -1,0 +1,13 @@
+name: test
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Notifies
+        uses: ./
+        with:
+          url: "http://{your-mattermost-site}/hooks/xxx-generatedkey-xxx"
+          options: -v
+          text: "This is a test"
