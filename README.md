@@ -39,6 +39,31 @@ The following workflow step would send a test message to the default channel.
     text: This is a test message
 ```
 
+### Send Multi-Line Markdown
+
+Mattermost supports [Markdown] for the formatting of messages. In Markdown, line
+breaks have some semantic (next paragraph, bullet-list items, etc.). However, in
+the text passed to the Mattermost API through this action, line breaks should
+appear as the character sequence `\n`. In order to write multi-line messages,
+you will have to avoid YAML [block] scalars that preserve the line breaks, i.e.
+use `>-` at the beginning of your blocks and manually write the `\n` whenever
+necessary, as in the following example:
+
+```yaml
+-
+  uses: Mitigram/gh-action-mattermost@main
+  with:
+    url: http://{your-mattermost-site}/hooks/xxx-generatedkey-xxx
+    text: >-
+      This is a multi-line message, introducing a bullet point list, meaning
+      that a blank line prior the start of the bullet list is preferred.\n\n
+      + One item\n
+      + Another item\n
+```
+
+  [Markdown]: https://docs.mattermost.com/messaging/formatting-text.html
+  [block]: https://yaml-multiline.info/
+
 ### Increased Verbosity
 
 The `options` action input can be used to provide more options to the internal
