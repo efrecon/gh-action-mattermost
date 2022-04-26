@@ -6,7 +6,11 @@ action provides for access to most of the parameters supported by incoming
 through the `card` mechanism. This information will be accessible from the
 **info** icon displayed alongside the post.
 
+This project is a friendly [fork] in order to provide some level of support on a
+voluntary basis.
+
   [webhooks]: https://developers.mattermost.com/integrate/incoming-webhooks/
+  [fork]: https://github.com/Mitigram/gh-action-mattermost
 
 ## Usage
 
